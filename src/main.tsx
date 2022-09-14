@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import ComponentPropsStateRef from './component-props-state-ref'
 import UseImperativeHandleExample from './useImperativeHandle'
 import UseReducerExample from './useReducer'
+import CustomHooksExample from './custom-hooks'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -12,5 +13,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <UseReducerExample />
     <hr />
     <UseImperativeHandleExample />
+    <hr />
+    <CustomHooksExample />
   </React.StrictMode>
 )

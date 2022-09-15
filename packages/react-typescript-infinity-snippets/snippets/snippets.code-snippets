@@ -1,0 +1,35 @@
+{
+  "console.log": {
+    "prefix": "clg",
+    "body": [
+      "console.log($1)"
+    ],
+    "description": "console.log"
+  },
+  "console.error": {
+    "prefix": "cle",
+    "body": [
+      "console.error($1)"
+    ],
+    "description": "console.error"
+  },
+  "useState": {
+    "prefix": "ust",
+    "body": [
+      "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2)"
+    ],
+    "description": "React Hooks useState"
+  },
+  "useEffect": {
+    "prefix": "uef",
+    "body": [
+      "useEffect(() => {",
+      "\t$1",
+      "\n\treturn () => {",
+      "\t\t$2",
+      "\t}",
+      "}, [$3])"
+    ],
+    "description": "React Hooks useEffect"
+  }
+}

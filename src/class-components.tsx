@@ -9,6 +9,9 @@ type State = {
   count: number
 }
 
+/**
+ * 大于 React 16.8 的版本，应该尽量使用函数组件搭配 React hooks 特性
+ */
 class ClassComponent extends Component<Props, State> {
   /** 
    * 不需要加 Readonly，React 已经正确标记了

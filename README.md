@@ -7,6 +7,7 @@
 * [useReducer 例子](./src/useReducer.tsx)
 * [useImperativeHandle 和 forwardRef 的例子](./src/useImperativeHandle.tsx)
 * [自定义 hooks](./src/custom-hooks.tsx)
+* [类组件](./src//class-components.tsx)
 
 # Playground
 [stackblitz](https://stackblitz.com/github/LiangNiang/react-ts-cheatsheet?file=README.md)

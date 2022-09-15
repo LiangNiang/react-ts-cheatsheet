@@ -1,20 +1,25 @@
 import { ChangeEvent, useEffect, useRef, useState } from 'react'
 
 type Props = {
-  message: string
-  count: number
-  disabled: boolean
-  names: string[]
+  message: string;
+  count: number;
+  disabled: boolean;
+  names: string[];
   /** 状态，（ 可以通过这样的 ts-doc 来添加注释 ） */
-  status: 'success' | 'error'
-  onClick: (id: number) => void
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void
-  optional?: any
-  btnProps: CommonComponentProps['btnProps']
-}
+  status: 'success' | 'error';
+  onClick: (id: number) => void;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  optional?: any;
+  btnProps: CommonComponentProps['btnProps'];
+};
 
 /** React 组件 */
-const ComponentPropsStateRef = ({ message, status, btnProps }: Props) => {
+const ComponentPropsStateRef = ({
+  /** 解构并赋值，等价于 defaultProps */
+  message = 'hello',
+  status,
+  btnProps,
+}: Props) => {
   /** state 部分 */
   /** 自动推断 state 类型 */
   const [visible, toggle] = useState(false)

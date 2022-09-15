@@ -5,6 +5,7 @@ import UseImperativeHandleExample from './useImperativeHandle'
 import UseReducerExample from './useReducer'
 import CustomHooksExample from './custom-hooks'
 import ClassComponent from './class-components'
+import FormsAndEvents from './forms-events'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -18,5 +19,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <CustomHooksExample />
     <hr />
     <ClassComponent message='hello' />
+    <hr />
+    <FormsAndEvents />
   </React.StrictMode>
 )

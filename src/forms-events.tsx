@@ -1,5 +1,5 @@
-import { ChangeEventHandler, FormEvent, SyntheticEvent, useState, MouseEvent } from 'react'
-
+import { ChangeEventHandler, FormEvent, SyntheticEvent, useState, MouseEvent, ComponentPropsWithoutRef } from 'react'
+import { ButtonGroup } from './components'
 
 const FormsAndEvents = () => {
   const [value, setValue] = useState<string>('')
@@ -37,14 +37,16 @@ const FormsAndEvents = () => {
     <div>
       <h1>Forms and Events</h1>
       <h2>
-        <button
+        <ButtonGroup>
+          <button
           // 如果性能不是问题（ 通常情况下都不会 ），内联的事件处理都是最简单和方便的
           // 内联的事件处理函数的类型能够被自动地推断
-          onClick={(ev) => {
-            console.log(ev)
-          }}
-        >inline event handler</button>
-        <button onClick={handleBtn2Click}>SyntheticEvent</button>
+            onClick={(ev) => {
+              console.log(ev)
+            }}
+          >inline event handler</button>
+          <button onClick={handleBtn2Click}>SyntheticEvent</button>
+        </ButtonGroup>
       </h2>
       <h2>
         <p>Your Input: {value}{value2}</p>

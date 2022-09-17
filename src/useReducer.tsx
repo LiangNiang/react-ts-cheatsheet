@@ -1,4 +1,5 @@
-import { useReducer, Reducer } from 'react'
+import { useReducer, Reducer, ComponentPropsWithoutRef } from 'react'
+import { ButtonGroup } from './components'
 
 const initialState = {
   count: 0,
@@ -25,22 +26,24 @@ const UseReducerExample = () => {
     <div>
       <h1>useReducer Example</h1>
       <h2>Count: {state.count}</h2>
-      <p>
-        <button
-          onClick={() => {
-            dispatch({ type: 'increment', payload: 1 })
-          }}
-        >
+      <div>
+        <ButtonGroup>
+          <button
+            onClick={() => {
+              dispatch({ type: 'increment', payload: 1 })
+            }}
+          >
           Add count
-        </button>
-        <button
-          onClick={() => {
-            dispatch({ type: 'decrement', payload: '2' })
-          }}
-        >
+          </button>
+          <button
+            onClick={() => {
+              dispatch({ type: 'decrement', payload: '2' })
+            }}
+          >
           Reduce count
-        </button>
-      </p>
+          </button>
+        </ButtonGroup>
+      </div>
     </div>
   )
 }

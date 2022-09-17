@@ -1,4 +1,5 @@
 import { ChangeEvent, useEffect, useRef, useState } from 'react'
+import { ButtonGroup } from './components'
 
 type Props = {
   message: string;
@@ -40,8 +41,10 @@ const ComponentPropsStateRef = ({
     <div>
       <h1>ComponentPropsStateRef</h1>
       <span>Hello World</span>
-      <button ref={btnRef}>Click 1</button>
-      <button ref={btnRef2}>Click 2</button>
+      <ButtonGroup>
+        <button ref={btnRef}>Click 1</button>
+        <button ref={btnRef2}>Click 2</button>
+      </ButtonGroup>
     </div>
   )
 }

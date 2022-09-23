@@ -6,6 +6,7 @@ import UseReducerExample from './useReducer'
 import CustomHooksExample from './custom-hooks'
 import ClassComponent from './class-components'
 import FormsAndEvents from './forms-events'
+import { WrapperComplex, WrapperSimple } from './context'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -21,5 +22,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <ClassComponent message='hello' />
     <hr />
     <FormsAndEvents />
+    <hr />
+    <WrapperSimple />
+    <hr />
+    <WrapperComplex />
   </React.StrictMode>
 )

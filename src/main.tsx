@@ -8,6 +8,7 @@ import ClassComponent from './class-components'
 import FormsAndEvents from './forms-events'
 import { WrapperComplex, WrapperSimple } from './context'
 import ModalDemo from './Portal'
+import ErrorDemo, { ErrorBoundary } from './Error'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -29,5 +30,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <WrapperComplex />
     <hr />
     <ModalDemo />
+    <hr />
+    <ErrorBoundary>
+      <ErrorDemo />
+    </ErrorBoundary>
   </React.StrictMode>
 )

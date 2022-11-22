@@ -1,0 +1,81 @@
+{
+  "import aaa from bbb": {
+    "prefix": "imp",
+    "body": [
+      "import ${2:second} from '${1:first}'"
+    ]
+  },
+  "import { aaa } from bbb": {
+    "prefix": "imd",
+    "body": [
+      "import { ${2:second} } from '${1:first}'"
+    ]
+  },
+  "import * as aaa from bbb": {
+    "prefix": "ime",
+    "body": [
+      "import * as ${2:second} from '${1:first}'"
+    ]
+  },
+  "import aaa": {
+    "prefix": "imn",
+    "body": [
+      "import '${1:first}'"
+    ]
+  },
+  "console.log": {
+    "prefix": "clg",
+    "body": [
+      "console.log($1)"
+    ],
+    "description": "console.log"
+  },
+  "console.error": {
+    "prefix": "cle",
+    "body": [
+      "console.error($1)"
+    ],
+    "description": "console.error"
+  },
+  "useState": {
+    "prefix": "ust",
+    "body": [
+      "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState<$3>($2)"
+    ],
+    "description": "React Hooks useState"
+  },
+  "useEffect": {
+    "prefix": "uef",
+    "body": [
+      "useEffect(() => {",
+      "\t$1",
+      "\n\treturn () => {",
+      "\t\t$2",
+      "\t}",
+      "}, [$3])"
+    ],
+    "description": "React Hooks useEffect"
+  },
+  "useRef": {
+    "prefix": "urf",
+    "body": [
+      "const $1 = useRef<HTMLDivElement>($2)"
+    ]
+  },
+  "useCallback": {
+    "prefix": "ucb",
+    "body": [
+      "const ${1:functionName} = useCallback(() => {",
+      "\t$2",
+      "}, [$3])",
+    ]
+  },
+  "useMemo": {
+    "prefix": "umo",
+    "body": [
+      "const ${1:value} = useMemo(() => {",
+      "\t$2",
+      "}, [$3])",
+    ]
+  }
+}
